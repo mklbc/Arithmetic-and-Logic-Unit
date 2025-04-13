@@ -1,0 +1,16 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity FLO_Module is
+    Port (
+        A : in STD_LOGIC_VECTOR (7 downto 0); -- 8-bit kayan noktalı sayı
+        B : in STD_LOGIC_VECTOR (7 downto 0); -- 8-bit kayan noktalı sayı
+        SUM : out STD_LOGIC_VECTOR (7 downto 0) -- 8-bit sonuç
+    );
+end FLO_Module;
+
+architecture Behavioral of FLO_Module is
+begin
+    -- Basit kayan nokta toplama (detaylı IEEE-754 işlemleri gerektirir)
+    SUM <= A + B;
+end Behavioral;
